@@ -128,7 +128,7 @@ export default function AddVisitDialog({ isOpen, onClose, patientId, addVisit, u
           <DialogTitle>{editingVisit ? t('common.edit') : t('common.add')} {t('pages.records.visits')}</DialogTitle>
         </DialogHeader>
         <div className="space-y-4 py-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="visitDate">Date</Label>
               <Input id="visitDate" type="date" value={newVisit.date} onChange={(e) => setNewVisit(p => ({...p, date: e.target.value}))} />
@@ -167,7 +167,7 @@ export default function AddVisitDialog({ isOpen, onClose, patientId, addVisit, u
             <Label htmlFor="treatment">Treatment</Label>
             <Input id="treatment" value={newVisit.treatment} onChange={(e) => setNewVisit(p => ({...p, treatment: e.target.value}))} />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="followUpDate">Follow-up Date</Label>
               <Input id="followUpDate" type="date" value={newVisit.followUpDate} onChange={(e) => setNewVisit(p => ({...p, followUpDate: e.target.value}))} />

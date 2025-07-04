@@ -79,7 +79,7 @@ export default function AddPatientDialog({ isOpen, onClose, onSave }: AddPatient
           <DialogDescription>{t('pages.records.addPatientDesc')}</DialogDescription>
         </DialogHeader>
         <div className="space-y-4 py-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="name">{t('common.name')} *</Label>
               <Input id="name" value={newPatient.name} onChange={(e) => setNewPatient(prev => ({ ...prev, name: e.target.value }))} placeholder={t('pages.records.enterPatientName')} />
@@ -89,7 +89,7 @@ export default function AddPatientDialog({ isOpen, onClose, onSave }: AddPatient
               <Input id="age" type="number" value={newPatient.age} onChange={(e) => setNewPatient(prev => ({ ...prev, age: e.target.value }))} placeholder={t('common.age')} />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label>{t('pages.triage.gender')}</Label>
               <Select value={newPatient.gender} onValueChange={(value: 'male' | 'female') => setNewPatient(prev => ({ ...prev, gender: value }))}>
@@ -110,7 +110,7 @@ export default function AddPatientDialog({ isOpen, onClose, onSave }: AddPatient
               </Select>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="phone">{t('common.phone')}</Label>
               <Input id="phone" value={newPatient.phone} onChange={(e) => setNewPatient(prev => ({ ...prev, phone: e.target.value }))} placeholder={t('pages.records.phoneNumber')} />
@@ -124,7 +124,7 @@ export default function AddPatientDialog({ isOpen, onClose, onSave }: AddPatient
             <Label htmlFor="address">{t('address')}</Label>
             <Input id="address" value={newPatient.address} onChange={(e) => setNewPatient(prev => ({ ...prev, address: e.target.value }))} placeholder={t('pages.records.fullAddress')} />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="emergency">{t('pages.records.emergencyContact')}</Label>
               <Input id="emergency" value={newPatient.emergencyContact} onChange={(e) => setNewPatient(prev => ({ ...prev, emergencyContact: e.target.value }))} placeholder={t('pages.records.emergencyContactName')} />

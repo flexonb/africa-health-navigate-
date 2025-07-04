@@ -112,14 +112,14 @@ export default function PainScale() {
 
                 {/* Scale UI */}
                 {activeScale === 'numeric' && (
-                  <div className="grid grid-cols-11 gap-1">
+                  <div className="flex flex-wrap gap-1">
                     {numericScale.map(item => (
-                      <Button key={item.score} variant={painScore === item.score ? 'default' : 'outline'} size="sm" onClick={() => setPainScore(item.score)} className="h-10">{item.score}</Button>
+                      <Button key={item.score} variant={painScore === item.score ? 'default' : 'outline'} size="sm" onClick={() => setPainScore(item.score)} className="h-10 flex-1 min-w-[36px]">{item.score}</Button>
                     ))}
                   </div>
                 )}
                 {activeScale === 'faces' && (
-                  <div className="grid grid-cols-6 gap-2">
+                  <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
                     {facesScale.map(face => (
                       <Button key={face.score} variant={painScore === face.score ? 'default' : 'outline'} onClick={() => setPainScore(face.score)} className="h-16 flex-col">
                         <span className="text-2xl">{face.emoji}</span>
@@ -162,7 +162,7 @@ export default function PainScale() {
                   {painCharacters.map(char => <ToggleGroupItem key={char} value={char} className="text-xs">{char}</ToggleGroupItem>)}
                 </ToggleGroup>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Label>Pain Duration</Label>
                   <Select value={formState.duration} onValueChange={value => setFormState(s => ({ ...s, duration: value }))}>

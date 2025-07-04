@@ -61,7 +61,7 @@ export default function AddLabResultDialog({ isOpen, onClose, patientId, addLabR
           <DialogTitle>{t('common.add')} {t('pages.records.labResults')}</DialogTitle>
         </DialogHeader>
         <div className="space-y-4 py-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="testName">Test Name</Label>
               <Input id="testName" value={newLabResult.testName} onChange={(e) => setNewLabResult(p => ({...p, testName: e.target.value}))} />

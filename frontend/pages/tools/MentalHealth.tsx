@@ -274,22 +274,24 @@ export default function MentalHealth() {
       </div>
 
       {/* Tab Navigation */}
-      <div className="flex space-x-1 mb-8 bg-gray-100 p-1 rounded-lg">
-        {[
-          { id: 'tracker', label: t('tools.mentalHealth.moodTracker') },
-          { id: 'assessment', label: t('tools.mentalHealth.selfAssessment') },
-          { id: 'strategies', label: t('tools.mentalHealth.copingStrategies') },
-          { id: 'journal', label: t('tools.mentalHealth.journal') }
-        ].map((tab) => (
-          <Button
-            key={tab.id}
-            variant={activeTab === tab.id ? 'default' : 'ghost'}
-            onClick={() => setActiveTab(tab.id as any)}
-            className="flex-1"
-          >
-            {tab.label}
-          </Button>
-        ))}
+      <div className="mb-8 overflow-x-auto">
+        <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg w-max">
+          {[
+            { id: 'tracker', label: t('tools.mentalHealth.moodTracker') },
+            { id: 'assessment', label: t('tools.mentalHealth.selfAssessment') },
+            { id: 'strategies', label: t('tools.mentalHealth.copingStrategies') },
+            { id: 'journal', label: t('tools.mentalHealth.journal') }
+          ].map((tab) => (
+            <Button
+              key={tab.id}
+              variant={activeTab === tab.id ? 'default' : 'ghost'}
+              onClick={() => setActiveTab(tab.id as any)}
+              className="px-4 py-2 whitespace-nowrap"
+            >
+              {tab.label}
+            </Button>
+          ))}
+        </div>
       </div>
 
       {/* Mood Tracker */}

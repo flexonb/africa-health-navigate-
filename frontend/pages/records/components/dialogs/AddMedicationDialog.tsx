@@ -62,7 +62,7 @@ export default function AddMedicationDialog({ isOpen, onClose, patientId, addMed
             <Label htmlFor="medName">Medication Name</Label>
             <Input id="medName" value={newMedication.name} onChange={(e) => setNewMedication(p => ({...p, name: e.target.value}))} />
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="dosage">Dosage</Label>
               <Input id="dosage" value={newMedication.dosage} onChange={(e) => setNewMedication(p => ({...p, dosage: e.target.value}))} />
@@ -72,7 +72,7 @@ export default function AddMedicationDialog({ isOpen, onClose, patientId, addMed
               <Input id="frequency" value={newMedication.frequency} onChange={(e) => setNewMedication(p => ({...p, frequency: e.target.value}))} />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="startDate">Start Date</Label>
               <Input id="startDate" type="date" value={newMedication.startDate} onChange={(e) => setNewMedication(p => ({...p, startDate: e.target.value}))} />

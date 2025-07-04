@@ -117,18 +117,20 @@ export default function PatientDetailView({
       </Card>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className={`grid w-full ${isPersonalView ? 'grid-cols-5' : 'grid-cols-7'}`}>
-          <TabsTrigger value="overview">{t('pages.records.overview')}</TabsTrigger>
-          {!isPersonalView && <TabsTrigger value="visits">{t('pages.records.visits')}</TabsTrigger>}
-          <TabsTrigger value="appointments">{t('common.appointments')}</TabsTrigger>
-          <TabsTrigger value="vaccinations">{t('pages.records.vaccines')}</TabsTrigger>
-          <TabsTrigger value="labs">{t('pages.records.labResults')}</TabsTrigger>
-          <TabsTrigger value="medications">{t('pages.records.medications')}</TabsTrigger>
-          {!isPersonalView && <TabsTrigger value="referrals">{t('pages.records.referrals')}</TabsTrigger>}
-          <TabsTrigger value="attachments">{t('pages.records.files')}</TabsTrigger>
-        </TabsList>
+        <div className="w-full overflow-x-auto pb-2 border-b">
+          <TabsList className="w-max">
+            <TabsTrigger value="overview">{t('pages.records.overview')}</TabsTrigger>
+            {!isPersonalView && <TabsTrigger value="visits">{t('pages.records.visits')}</TabsTrigger>}
+            <TabsTrigger value="appointments">{t('common.appointments')}</TabsTrigger>
+            <TabsTrigger value="vaccinations">{t('pages.records.vaccines')}</TabsTrigger>
+            <TabsTrigger value="labs">{t('pages.records.labResults')}</TabsTrigger>
+            <TabsTrigger value="medications">{t('pages.records.medications')}</TabsTrigger>
+            {!isPersonalView && <TabsTrigger value="referrals">{t('pages.records.referrals')}</TabsTrigger>}
+            <TabsTrigger value="attachments">{t('pages.records.files')}</TabsTrigger>
+          </TabsList>
+        </div>
 
-        <TabsContent value="overview">
+        <TabsContent value="overview" className="mt-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
@@ -174,7 +176,7 @@ export default function PatientDetailView({
         </TabsContent>
 
         {!isPersonalView && (
-          <TabsContent value="visits">
+          <TabsContent value="visits" className="mt-4">
             <div className="flex justify-end mb-4">
               <Button size="sm" onClick={onAddVisit}><Plus className="h-4 w-4 mr-2" />{t('pages.records.addVisit')}</Button>
             </div>
@@ -202,7 +204,7 @@ export default function PatientDetailView({
           </TabsContent>
         )}
 
-        <TabsContent value="appointments">
+        <TabsContent value="appointments" className="mt-4">
           <div className="flex justify-end mb-4">
             <Button size="sm" onClick={onAddAppointment}><Plus className="h-4 w-4 mr-2" />{t('common.addAppointment')}</Button>
           </div>
@@ -245,7 +247,7 @@ export default function PatientDetailView({
           )}
         </TabsContent>
 
-        <TabsContent value="vaccinations">
+        <TabsContent value="vaccinations" className="mt-4">
           <div className="flex justify-end mb-4">
             <Button size="sm" onClick={onAddVaccination}><Plus className="h-4 w-4 mr-2" />{t('common.add')} {t('pages.records.vaccines')}</Button>
           </div>
@@ -268,7 +270,7 @@ export default function PatientDetailView({
           )}
         </TabsContent>
 
-        <TabsContent value="labs">
+        <TabsContent value="labs" className="mt-4">
           <div className="flex justify-end mb-4">
             <Button size="sm" onClick={onAddLabResult}><Plus className="h-4 w-4 mr-2" />{t('common.add')} {t('pages.records.labResults')}</Button>
           </div>
@@ -291,7 +293,7 @@ export default function PatientDetailView({
           )}
         </TabsContent>
 
-        <TabsContent value="medications">
+        <TabsContent value="medications" className="mt-4">
           <div className="flex justify-end mb-4">
             <Button size="sm" onClick={onAddMedication}><Plus className="h-4 w-4 mr-2" />{t('common.add')} {t('pages.records.medications')}</Button>
           </div>
@@ -315,7 +317,7 @@ export default function PatientDetailView({
         </TabsContent>
 
         {!isPersonalView && (
-          <TabsContent value="referrals">
+          <TabsContent value="referrals" className="mt-4">
             <div className="flex justify-end mb-4">
               <Button size="sm" onClick={onAddReferral}><Plus className="h-4 w-4 mr-2" />{t('common.add')} {t('pages.records.referrals')}</Button>
             </div>
@@ -341,7 +343,7 @@ export default function PatientDetailView({
           </TabsContent>
         )}
 
-        <TabsContent value="attachments">
+        <TabsContent value="attachments" className="mt-4">
           <div className="flex justify-end mb-4">
             <Button size="sm" onClick={onAddAttachment}><Plus className="h-4 w-4 mr-2" />{t('common.add')} {t('pages.records.files')}</Button>
           </div>
