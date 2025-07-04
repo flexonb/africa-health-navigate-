@@ -23,7 +23,7 @@ const MoodTrackingContext = createContext<MoodTrackingContextType | undefined>(u
 
 export function MoodTrackingProvider({ children }: { children: ReactNode }) {
   const [entries, setEntries] = useState<MoodEntry[]>(() => {
-    const saved = localStorage.getItem('afrihealth-mood');
+    const saved = localStorage.getItem('docomax-mood');
     if (saved) {
       return JSON.parse(saved).map((entry: any) => ({
         ...entry,
@@ -34,7 +34,7 @@ export function MoodTrackingProvider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('afrihealth-mood', JSON.stringify(entries));
+    localStorage.setItem('docomax-mood', JSON.stringify(entries));
   }, [entries]);
 
   const addEntry = (entryData: Omit<MoodEntry, 'id'>) => {

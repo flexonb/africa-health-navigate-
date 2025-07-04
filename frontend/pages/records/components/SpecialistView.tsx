@@ -81,7 +81,7 @@ export default function SpecialistView() {
     const addHeader = () => {
       doc.setFontSize(20);
       doc.setFont('helvetica', 'bold');
-      doc.text('AfriHealth Advisor - Patient Record', pageWidth / 2, 20, { align: 'center' });
+      doc.text('Docomax - Patient Record', pageWidth / 2, 20, { align: 'center' });
       doc.setFontSize(16);
       doc.text(patient.name, 14, 30);
       doc.setLineWidth(0.5);

@@ -40,7 +40,7 @@ const getPageTitle = (pathname: string, t: (key: string, replacements?: Record<s
     return t(titleKey);
   }
 
-  return 'AfriHealth Advisor';
+  return 'Docomax';
 };
 
 export default function Header() {
@@ -64,7 +64,7 @@ export default function Header() {
 
   React.useEffect(() => {
     const pageTitle = getPageTitle(location.pathname, t);
-    document.title = `AfriHealth - ${pageTitle}`;
+    document.title = `Docomax - ${pageTitle}`;
   }, [location.pathname, t]);
 
   const navigationItems = [

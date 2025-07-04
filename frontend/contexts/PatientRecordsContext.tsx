@@ -162,7 +162,7 @@ const PatientRecordsContext = createContext<PatientRecordsContextType | undefine
 
 export function PatientRecordsProvider({ children }: { children: ReactNode }) {
   const [patients, setPatients] = useState<PatientRecord[]>(() => {
-    const saved = localStorage.getItem('afrihealth-patients');
+    const saved = localStorage.getItem('docomax-patients');
     if (saved) {
       try {
         return JSON.parse(saved).map((p: any) => ({
@@ -206,7 +206,7 @@ export function PatientRecordsProvider({ children }: { children: ReactNode }) {
   });
 
   const [appointments, setAppointments] = useState<Appointment[]>(() => {
-    const saved = localStorage.getItem('afrihealth-appointments');
+    const saved = localStorage.getItem('docomax-appointments');
     if (saved) {
       try {
         return JSON.parse(saved).map((a: any) => ({
@@ -222,11 +222,11 @@ export function PatientRecordsProvider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('afrihealth-patients', JSON.stringify(patients));
+    localStorage.setItem('docomax-patients', JSON.stringify(patients));
   }, [patients]);
 
   useEffect(() => {
-    localStorage.setItem('afrihealth-appointments', JSON.stringify(appointments));
+    localStorage.setItem('docomax-appointments', JSON.stringify(appointments));
   }, [appointments]);
 
   const addPatient = (patientData: Omit<PatientRecord, 'id' | 'visits' | 'vaccinations' | 'labResults' | 'attachments' | 'referrals' | 'currentMedications' | 'createdAt' | 'updatedAt'>) => {

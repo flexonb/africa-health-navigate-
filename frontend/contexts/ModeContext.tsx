@@ -12,12 +12,12 @@ const ModeContext = createContext<ModeContextType | undefined>(undefined);
 
 export function ModeProvider({ children }: { children: ReactNode }) {
   const [mode, setModeState] = useState<AppMode>(() => {
-    const savedMode = localStorage.getItem('afrihealth-mode') as AppMode;
+    const savedMode = localStorage.getItem('docomax-mode') as AppMode;
     return savedMode || 'personal'; // Default to personal
   });
 
   const setMode = (newMode: AppMode) => {
-    localStorage.setItem('afrihealth-mode', newMode);
+    localStorage.setItem('docomax-mode', newMode);
     setModeState(newMode);
   };
 

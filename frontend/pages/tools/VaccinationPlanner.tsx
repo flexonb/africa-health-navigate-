@@ -30,12 +30,12 @@ export default function VaccinationPlanner() {
   const [selectedVaccine, setSelectedVaccine] = useState<string | null>(null);
   const [schedule, setSchedule] = useState<ScheduleItem[]>([]);
   const [completedVaccinations, setCompletedVaccinations] = useState<Set<string>>(() => {
-    const saved = localStorage.getItem('afrihealth-completed-vaccinations');
+    const saved = localStorage.getItem('docomax-completed-vaccinations');
     return saved ? new Set(JSON.parse(saved)) : new Set();
   });
 
   useEffect(() => {
-    localStorage.setItem('afrihealth-completed-vaccinations', JSON.stringify(Array.from(completedVaccinations)));
+    localStorage.setItem('docomax-completed-vaccinations', JSON.stringify(Array.from(completedVaccinations)));
   }, [completedVaccinations]);
 
   useEffect(() => {

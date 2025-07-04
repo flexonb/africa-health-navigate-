@@ -94,7 +94,7 @@ export const translations = {
     },
     pages: {
       home: {
-        title: 'AfriHealth Advisor',
+        title: 'Docomax',
         subtitle: 'Your offline medical assistant',
         description: 'Access medical guidance, track health records, and get emergency assistance without internet connection.',
         quickAccess: 'Quick Access',
@@ -905,7 +905,7 @@ export const translations = {
     },
     pages: {
       home: {
-        title: 'AfriHealth Advisor',
+        title: 'Docomax',
         subtitle: 'Votre assistant médical hors ligne',
         description: 'Accédez aux conseils médicaux, suivez les dossiers de santé et obtenez une assistance d\'urgence sans connexion internet.',
         quickAccess: 'Accès Rapide',
@@ -1716,7 +1716,7 @@ export const translations = {
     },
     pages: {
       home: {
-        title: 'AfriHealth Advisor',
+        title: 'Docomax',
         subtitle: 'Msaidizi wako wa matibabu nje ya mtandao',
         description: 'Pata miongozo ya matibabu, fuatilia rekodi za afya, na upate msaada wa dharura bila muunganisho wa mtandao.',
         quickAccess: 'Ufikiaji wa Haraka',

@@ -22,7 +22,7 @@ const PainAssessmentContext = createContext<PainAssessmentContextType | undefine
 
 export function PainAssessmentProvider({ children }: { children: ReactNode }) {
   const [assessments, setAssessments] = useState<PainAssessment[]>(() => {
-    const saved = localStorage.getItem('afrihealth-pain-assessments');
+    const saved = localStorage.getItem('docomax-pain-assessments');
     if (saved) {
       try {
         return JSON.parse(saved).map((a: any) => ({ ...a, date: new Date(a.date) }));
@@ -35,7 +35,7 @@ export function PainAssessmentProvider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('afrihealth-pain-assessments', JSON.stringify(assessments));
+    localStorage.setItem('docomax-pain-assessments', JSON.stringify(assessments));
   }, [assessments]);
 
   const addAssessment = (assessmentData: Omit<PainAssessment, 'id' | 'date'>) => {

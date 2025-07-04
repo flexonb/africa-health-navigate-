@@ -51,7 +51,7 @@ export default function MentalHealth() {
   const [assessmentResult, setAssessmentResult] = useState<number | null>(null);
   const [journalEntry, setJournalEntry] = useState('');
   const [journalEntries, setJournalEntries] = useState<JournalEntry[]>(() => {
-    const saved = localStorage.getItem('afrihealth-journal');
+    const saved = localStorage.getItem('docomax-journal');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -66,7 +66,7 @@ export default function MentalHealth() {
   });
 
   useEffect(() => {
-    localStorage.setItem('afrihealth-journal', JSON.stringify(journalEntries));
+    localStorage.setItem('docomax-journal', JSON.stringify(journalEntries));
   }, [journalEntries]);
 
   const handleSaveJournal = () => {
