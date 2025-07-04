@@ -121,7 +121,7 @@ export default function AddPatientDialog({ isOpen, onClose, onSave }: AddPatient
             </div>
           </div>
           <div>
-            <Label htmlFor="address">{t('common.address')}</Label>
+            <Label htmlFor="address">{t('address')}</Label>
             <Input id="address" value={newPatient.address} onChange={(e) => setNewPatient(prev => ({ ...prev, address: e.target.value }))} placeholder={t('pages.records.fullAddress')} />
           </div>
           <div className="grid grid-cols-2 gap-4">

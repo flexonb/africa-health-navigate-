@@ -2,6 +2,7 @@ export type Language = 'en' | 'fr' | 'sw';
 
 export const translations = {
   en: {
+    address: 'Address',
     common: {
       home: 'Home',
       triage: 'Symptom Checker',
@@ -813,6 +814,7 @@ export const translations = {
     },
   },
   fr: {
+    address: 'Adresse',
     common: {
       home: 'Accueil',
       triage: 'Vérificateur de Symptômes',
@@ -1624,6 +1626,7 @@ export const translations = {
     },
   },
   sw: {
+    address: 'Anwani',
     common: {
       home: 'Nyumbani',
       triage: 'Mkaguzi wa Dalili',

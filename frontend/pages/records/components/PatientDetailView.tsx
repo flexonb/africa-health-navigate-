@@ -137,7 +137,7 @@ export default function PatientDetailView({
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                   <div><strong>{t('common.phone')}:</strong> {patient.phone || 'N/A'}</div>
-                  <div><strong>{t('common.address')}:</strong> {patient.address || 'N/A'}</div>
+                  <div><strong>{t('address')}:</strong> {patient.address || 'N/A'}</div>
                   <div><strong>{t('pages.records.emergencyContact')}:</strong> {patient.emergencyContact || 'N/A'}</div>
                   <div><strong>{t('pages.records.emergencyContactPhone')}:</strong> {patient.emergencyContactPhone || 'N/A'}</div>
                   <div className="md:col-span-2"><strong>{t('common.allergies')}:</strong> {patient.allergies?.join(', ') || 'None'}</div>
