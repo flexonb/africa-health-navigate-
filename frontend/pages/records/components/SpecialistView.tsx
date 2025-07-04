@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { Plus, Users, Activity, TrendingUp, Shield, Search, Filter, Download, Trash2, User, Syringe, FlaskConical, Pill, Calendar } from 'lucide-react';
+import { Plus, Users, Activity, TrendingUp, Shield, Search, Filter, Download, Trash2, User, Syringe, FlaskConical, Pill, Calendar, FileText } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
